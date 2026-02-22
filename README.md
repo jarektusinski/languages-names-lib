@@ -77,5 +77,4 @@ LanguagesNamesLib/
 ```
 
 ## License
-
 MIT

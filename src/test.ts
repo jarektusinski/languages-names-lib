@@ -2,7 +2,14 @@ import Language, { LanguageName, LanguageNativeName } from '.';
 import Names from './names';
 import NativeNames from './nativeNames';
 
-const { LANGUAGE_NAMES, LANGUAGE_NATIVE_NAMES, mapLanguageToNative, mapNativeToLanguages } = Language;
+const {
+    LANGUAGE_NAMES,
+    LANGUAGE_NATIVE_NAMES,
+    LANGUAGES_TO_NATIVES,
+    NATIVES_TO_LANGUAGES,
+    mapLanguageToNative, 
+    mapNativeToLanguages
+} = Language;
 
 const NUMBER_OF_LANGUAGES = 232;
 const LANGUAGE_KEYS = [...Object.keys(Names)] as const;
@@ -267,10 +274,12 @@ beforeAll(() => {
 
 describe.each(mappingTestCases)('Mapping:', (englishName, nativeName) => {
     it(`should map ${englishName} to ${nativeName} correctly`, () => {
+        expect(LANGUAGES_TO_NATIVES[englishName]).toEqual(nativeName);
         expect(mapLanguageToNative(englishName)).toEqual(nativeName);
     });
 
     it(`should map ${nativeName} to ${englishName} correctly`, () => {
+        expect(NATIVES_TO_LANGUAGES[nativeName]).toEqual(englishName);
         expect(mapNativeToLanguages(nativeName)).toEqual(englishName);
     });
 });

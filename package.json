@@ -1,7 +1,7 @@
 {
-  "name": "languages-names-lib",
+  "name": "td-languages-names",
   "version": "1.0.0",
-  "description": "TypeScript/JavaScript library with 230+ language names in English and in their native script (e.g. 日本語, Polski, العربية). Includes bidirectional maps and typed constants and language selectors.",
+  "description": "TypeScript/JavaScript library with 232 language names in English and in their native script (e.g. 日本語, Polski, العربية). Includes bidirectional maps and typed constants and language selectors.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
