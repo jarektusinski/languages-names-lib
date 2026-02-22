@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "lint": "eslint src tests --ext .ts",
     "lint:fix": "eslint src tests --ext .ts --fix",
@@ -27,7 +28,7 @@
     "endonym",
     "exonym"
   ],
-  "author": "",
+  "author": "Jarosław Tusiński",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -43,5 +44,8 @@
   "files": [
     "dist",
     "src"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
