@@ -36,13 +36,13 @@ import Languages, {
 } from 'languages-names-lib';
 
 // Language names (English) and native names arrays
-const { LANGUAGE_NAMES, LANGUAGE_NATIVE_NAMES } = Languages;
-console.log(LANGUAGE_NAMES[0]);        // e.g. "Acehnese"
-console.log(LANGUAGE_NATIVE_NAMES[0]); // e.g. "Bahsa Acèh"
+const { LANGUAGES, LANGUAGES_NATIVES } = Languages;
+console.log(LANGUAGES[0]);        // e.g. "Acehnese"
+console.log(LANGUAGES_NATIVES[0]); // e.g. "Bahsa Acèh"
 
 // Individual constants (spread from Names and NativeNames)
-console.log(Languages.POLISH_NAME);           // "Polish"
-console.log(Languages.POLISH_NATIVE_NAME);    // "Polski"
+console.log(Languages.POLISH);           // "Polish"
+console.log(Languages.POLISH_NATIVE);    // "Polski"
 
 // Mapping: English name → native name
 const { mapLanguageToNative, LANGUAGES_TO_NATIVES } = Languages;
@@ -68,7 +68,7 @@ LanguagesNamesLib/
 │   ├── names.ts        # English language name constants
 │   ├── nativeNames.ts  # Native language name constants
 │   ├── maps.ts         # language ↔ native name mappings and mapper functions
-│   ├── types.ts        # LANGUAGE_NAMES, LANGUAGE_NATIVE_NAMES arrays and TypeScript types
+│   ├── types.ts        # LANGUAGES, LANGUAGES_NATIVES arrays and TypeScript types
 │   └── test.ts         # Test utilities or additional tests
 ├── package.json
 ├── tsconfig.json

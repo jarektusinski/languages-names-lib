@@ -3,8 +3,8 @@ import Names from './names';
 import NativeNames from './nativeNames';
 
 const {
-    LANGUAGE_NAMES,
-    LANGUAGE_NATIVE_NAMES,
+    LANGUAGES,
+    LANGUAGES_NATIVES,
     LANGUAGES_TO_NATIVES,
     NATIVES_TO_LANGUAGES,
     mapLanguageToNative, 
@@ -257,10 +257,10 @@ const sortArray = (arr: readonly string[]): string[] =>
     removeDashesWithSpace(arr).sort();
 
 it('should contain all names', () => {
-    expect(LANGUAGE_NAMES).toHaveLength(NUMBER_OF_LANGUAGES);
-    expect(LANGUAGE_NATIVE_NAMES).toHaveLength(NUMBER_OF_LANGUAGES);
-    expect((new Set(LANGUAGE_NAMES)).size).toBe(NUMBER_OF_LANGUAGES);
-    expect((new Set(LANGUAGE_NATIVE_NAMES)).size).toBe(NUMBER_OF_LANGUAGES);
+    expect(LANGUAGES).toHaveLength(NUMBER_OF_LANGUAGES);
+    expect(LANGUAGES_NATIVES).toHaveLength(NUMBER_OF_LANGUAGES);
+    expect((new Set(LANGUAGES)).size).toBe(NUMBER_OF_LANGUAGES);
+    expect((new Set(LANGUAGES_NATIVES)).size).toBe(NUMBER_OF_LANGUAGES);
 });
 
 it('should be sorted', () => {
