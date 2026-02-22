@@ -1,68 +1,80 @@
-# LanguagesNamesLib
+# Languages Names Lib
 
-TypeScript library providing language names as constants.
+TypeScript library providing language names in English and in their native forms, with mapping utilities.
 
-## Instalacja
+## Installation
 
-Aby zainstalować zależności projektu, uruchom:
+To install the project dependencies, run:
 
 ```bash
 npm install
 ```
 
-## Uruchamianie testów
+## Running tests
 
-Po zainstalowaniu zależności, możesz uruchomić testy za pomocą:
+After installing dependencies, you can run the tests with:
 
 ```bash
 npm test
 ```
 
-## Dostępne skrypty
+## Available scripts
 
-- `npm run build` - Kompiluje TypeScript do JavaScript w folderze `dist/`
-- `npm test` - Uruchamia testy z użyciem Jest
-- `npm run lint` - Sprawdza kod pod kątem błędów lintingu
-- `npm run lint:fix` - Automatycznie naprawia błędy lintingu
-- `npm run format` - Formatuje kod używając Prettier
-- `npm run format:check` - Sprawdza formatowanie kodu
+- `npm run build` — Compiles TypeScript to JavaScript in the `dist/` folder
+- `npm test` — Runs tests with Jest
+- `npm run lint` — Checks the code for lint errors
+- `npm run lint:fix` — Automatically fixes lint errors
+- `npm run format` — Formats the code using Prettier
+- `npm run format:check` — Checks code formatting
 
-## Użycie
+## Usage
 
 ```typescript
-import { LANGUAGE_NAMES, ALL_LANGUAGE_NAMES, LanguageName } from 'languages-names-lib';
+import Languages, {
+    LanguageName,
+    LanguageNativeName,
+} from 'languages-names-lib';
 
-// Użycie pojedynczych stałych
-console.log(LANGUAGE_NAMES.ENGLISH); // "English"
-console.log(LANGUAGE_NAMES.POLISH);  // "Polish"
+// Language names (English) and native names arrays
+const { LANGUAGE_NAMES, LANGUAGE_NATIVE_NAMES } = Languages;
+console.log(LANGUAGE_NAMES[0]);        // e.g. "Acehnese"
+console.log(LANGUAGE_NATIVE_NAMES[0]); // e.g. "Bahsa Acèh"
 
-// Użycie tablicy wszystkich nazw
-ALL_LANGUAGE_NAMES.forEach(name => {
-  console.log(name);
-});
+// Individual constants (spread from Names and NativeNames)
+console.log(Languages.POLISH_NAME);           // "Polish"
+console.log(Languages.POLISH_NATIVE_NAME);    // "Polski"
 
-// Użycie typu
-const myLanguage: LanguageName = LANGUAGE_NAMES.GERMAN;
+// Mapping: English name → native name
+const { mapLanguageToNative, LANGUAGES_TO_NATIVES } = Languages;
+console.log(mapLanguageToNative('Polish'));  // "Polski"
+console.log(LANGUAGES_TO_NATIVES['Japanese']); // "日本語"
+
+// Mapping: native name → English name
+const { mapNativeToLanguages, NATIVES_TO_LANGUAGES } = Languages;
+console.log(mapNativeToLanguages('Polski'));  // "Polish"
+console.log(NATIVES_TO_LANGUAGES['日本語']);   // "Japanese"
+
+// Using types
+const myLanguage: LanguageName = 'German';
+const nativeName: LanguageNativeName = Languages.mapLanguageToNative(myLanguage);
 ```
 
-## Struktura projektu
+## Project structure
 
 ```
 LanguagesNamesLib/
 ├── src/
-│   ├── constants.ts    # Definicje stałych nazw języków
-│   └── index.ts        # Główny punkt wejścia biblioteki
-├── tests/
-│   ├── constants.test.ts
-│   └── index.test.ts
+│   ├── index.ts        # Main entry point; re-exports names, native names, maps, and types
+│   ├── names.ts        # English language name constants
+│   ├── nativeNames.ts  # Native language name constants
+│   ├── maps.ts         # language ↔ native name mappings and mapper functions
+│   ├── types.ts        # LANGUAGE_NAMES, LANGUAGE_NATIVE_NAMES arrays and TypeScript types
+│   └── test.ts         # Test utilities or additional tests
 ├── package.json
 ├── tsconfig.json
-├── .eslintrc.json
-├── .prettierrc
-└── jest.config.js
+├── jest.config.js
+└── README.md
 ```
 
-## Licencja
-
+## License
 MIT
-
