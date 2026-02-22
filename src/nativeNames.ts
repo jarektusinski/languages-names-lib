@@ -94,8 +94,8 @@ const CEBUANO_NATIVE_NAME = 'Sinugbuanong Binisaya' as const;
 /** English: Chhattisgarhi */
 const CHHATTISGARHI_NATIVE_NAME = 'छत्तिसगढ़ी' as const;
 
-/** English: Chichewa */
-const CHICHEWA_NATIVE_NAME = 'Chinyanja' as const;
+/** English: Chewa */
+const CHEWA_NATIVE_NAME = 'Chichewa' as const;
 
 /** English: Chinese */
 const CHINESE_NATIVE_NAME = '中文' as const;
@@ -341,7 +341,7 @@ const LUBA_KASAI_NATIVE_NAME = 'Tshiluba' as const;
 const LUGANDA_NATIVE_NAME = 'Luganda' as const;
 
 /** English: Luo */
-const LUO_NATIVE_NAME = 'Dholuo' as const;
+const LUO_NATIVE_NAME = 'Luo' as const;
 
 /** English: Luxembourgish */
 const LUXEMBOURGISH_NATIVE_NAME = 'Lëtzebuergesch' as const;
@@ -377,7 +377,7 @@ const MALTESE_NATIVE_NAME = 'Malti' as const;
 const MANDARIN_NATIVE_NAME = '官話' as const;
 
 /** English: Manipuri */
-const MANIPURI_NATIVE_NAME = 'মৈতৈলোন্' as const;
+const MANIPURI_NATIVE_NAME = 'মনিপুরি' as const;
 
 /** English: Maori */
 const MAORI_NATIVE_NAME = 'Te Reo Māori' as const;
@@ -398,7 +398,7 @@ const MARWARI_NATIVE_NAME = 'मारवाड़ी' as const;
 const MAYA_NATIVE_NAME = "Maaya T'aan" as const;
 
 /** English: Meitei */
-const MEITEI_NATIVE_NAME = 'মৈতৈলোন্' as const;
+const MEITEI_NATIVE_NAME = 'ꯃꯩꯇꯩꯂꯣꯟ' as const;
 
 /** English: Meru */
 const MERU_NATIVE_NAME = 'Kĩmĩrũ' as const;
@@ -453,9 +453,6 @@ const ODIA_NATIVE_NAME = 'ଓଡ଼ିଆ' as const;
 
 /** English: Ojibwe */
 const OJIBWE_NATIVE_NAME = 'Anishinaabemowin' as const;
-
-/** English: Oriya */
-const ORIYA_NATIVE_NAME = 'ଓଡ଼ିଆ' as const;
 
 /** English: Oromo */
 const OROMO_NATIVE_NAME = 'Afaan Oromoo' as const;
@@ -686,7 +683,7 @@ const YIDDISH_NATIVE_NAME = 'ייִדיש' as const;
 const YORUBA_NATIVE_NAME = 'Yorùbá' as const;
 
 /** English: Yucatec Maya */
-const YUCATEC_MAYA_NATIVE_NAME = "Maaya T'aan" as const;
+const YUCATEC_MAYA_NATIVE_NAME = "Yucatec Maaya T'aan" as const;
 
 /** English: Zapotec */
 const ZAPOTEC_NATIVE_NAME = 'Diidxazá' as const;
@@ -730,7 +727,7 @@ export default {
     CATALAN_NATIVE_NAME,
     CEBUANO_NATIVE_NAME,
     CHHATTISGARHI_NATIVE_NAME,
-    CHICHEWA_NATIVE_NAME,
+    CHICHEWA_NATIVE_NAME: CHEWA_NATIVE_NAME,
     CHINESE_NATIVE_NAME,
     CHITTAGONIAN_NATIVE_NAME,
     CHUVASH_NATIVE_NAME,
@@ -850,7 +847,6 @@ export default {
     OCCITAN_NATIVE_NAME,
     ODIA_NATIVE_NAME,
     OJIBWE_NATIVE_NAME,
-    ORIYA_NATIVE_NAME,
     OROMO_NATIVE_NAME,
     PANGASINAN_NATIVE_NAME,
     PASHTO_NATIVE_NAME,

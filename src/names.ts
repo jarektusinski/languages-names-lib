@@ -191,10 +191,10 @@ const CEBUANO_NAME = 'Cebuano' as const;
 const CHHATTISGARHI_NAME = 'Chhattisgarhi' as const;
 
 /**
- * Chichewa language, Niger-Congo family
+ * Chewa language, Niger-Congo family
  * @description ~10.3 million speakers (2023)
  */
-const CHICHEWA_NAME = 'Chichewa' as const;
+const CHEWA_NAME = 'Chewa' as const;
 
 /**
  * Chinese (Mandarin) language, Sino-Tibetan family
@@ -911,12 +911,6 @@ const ODIA_NAME = 'Odia' as const;
 const OJIBWE_NAME = 'Ojibwe' as const;
 
 /**
- * Oriya language (see Odia), Indo-European family
- * @description ~38 million speakers (2023)
- */
-const ORIYA_NAME = 'Oriya' as const;
-
-/**
  * Oromo language, Afro-Asiatic family
  * @description ~37 million speakers (2023)
  */
@@ -1429,7 +1423,7 @@ export default {
     CATALAN_NAME,
     CEBUANO_NAME,
     CHHATTISGARHI_NAME,
-    CHICHEWA_NAME,
+    CHICHEWA_NAME: CHEWA_NAME,
     CHINESE_NAME,
     CHITTAGONIAN_NAME,
     CHUVASH_NAME,
@@ -1549,7 +1543,6 @@ export default {
     OCCITAN_NAME,
     ODIA_NAME,
     OJIBWE_NAME,
-    ORIYA_NAME,
     OROMO_NAME,
     PANGASINAN_NAME,
     PASHTO_NAME,

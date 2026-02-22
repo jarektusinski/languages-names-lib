@@ -13,11 +13,9 @@ type LanguageNativeName = typeof LANGUAGE_NATIVE_NAMES[number];
 export type {
     LanguageName,
     LanguageNativeName,
-};
+}
 
 export default {
-    ...Names,
-    ...NativeNames,
     LANGUAGE_NAMES,
     LANGUAGE_NATIVE_NAMES,
 };
