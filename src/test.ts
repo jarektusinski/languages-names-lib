@@ -243,9 +243,11 @@ const mappingTestCases = [
     ['Zulu', 'isiZulu'],
 ] as ([LanguageName, LanguageNativeName])[];
 
-const removeDashesWithSpace = (arr: readonly string[]) => arr.map((arg: string) => arg.replace('_', ' '));
+const removeDashesWithSpace = (arr: readonly string[]): string[] =>
+    arr.map((arg: string) => arg.replace('_', ' '));
 
-const sortArray = (arr: readonly string[]) => removeDashesWithSpace(arr).sort();
+const sortArray = (arr: readonly string[]): string[] =>
+    removeDashesWithSpace(arr).sort();
 
 it('should contain all names', () => {
     expect(LANGUAGE_NAMES).toHaveLength(NUMBER_OF_LANGUAGES);
