@@ -2,13 +2,13 @@ import Names from './names';
 import NativeNames from './nativeNames';
 
 /** @type LanguageName[] */
-const LANGUAGE_NAMES = [...Object.values(Names)] as const;
+const LANGUAGES = [...Object.values(Names)] as const;
 
 /** @type LanguageNativeName[] */
-const LANGUAGE_NATIVE_NAMES = [...Object.values(NativeNames)] as const;
+const LANGUAGES_NATIVES = [...Object.values(NativeNames)] as const;
 
-type LanguageName = typeof LANGUAGE_NAMES[number];
-type LanguageNativeName = typeof LANGUAGE_NATIVE_NAMES[number];
+type LanguageName = typeof LANGUAGES[number];
+type LanguageNativeName = typeof LANGUAGES_NATIVES[number];
 
 export type {
     LanguageName,
@@ -16,6 +16,6 @@ export type {
 }
 
 export default {
-    LANGUAGE_NAMES,
-    LANGUAGE_NATIVE_NAMES,
+    LANGUAGES,
+    LANGUAGES_NATIVES,
 };
