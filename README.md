@@ -1,4 +1,4 @@
-# Languages Names Lib
+# [TusinskiDev] Languages Names
 
 TypeScript library providing language names in English and in their native forms, with mapping utilities.
 
@@ -33,7 +33,7 @@ npm test
 import Languages, {
     LanguageName,
     LanguageNativeName,
-} from 'languages-names-lib';
+} from 'td-languages-names';
 
 // Language names (English) and native names arrays
 const { LANGUAGES, LANGUAGES_NATIVES } = Languages;
