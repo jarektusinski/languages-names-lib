@@ -276,10 +276,22 @@ describe.each(mappingTestCases)('Mapping:', (englishName, nativeName) => {
     it(`should map ${englishName} to ${nativeName} correctly`, () => {
         expect(LANGUAGES_TO_NATIVES[englishName]).toEqual(nativeName);
         expect(mapLanguageToNative(englishName)).toEqual(nativeName);
+
+        const languagesWithoutEnglishName = LANGUAGES_NATIVES.filter((language) => language !== nativeName);
+        const randomLanguage = languagesWithoutEnglishName[Math.floor(Math.random() * languagesWithoutEnglishName.length)];
+
+        expect(LANGUAGES_TO_NATIVES[englishName]).not.toEqual(randomLanguage);
+        expect(mapLanguageToNative(englishName)).not.toEqual(randomLanguage);
     });
 
     it(`should map ${nativeName} to ${englishName} correctly`, () => {
         expect(NATIVES_TO_LANGUAGES[nativeName]).toEqual(englishName);
         expect(mapNativeToLanguages(nativeName)).toEqual(englishName);
+
+        const languagesWithoutEnglishName = LANGUAGES.filter((language) => language !== englishName);
+        const randomLanguage = languagesWithoutEnglishName[Math.floor(Math.random() * languagesWithoutEnglishName.length)];
+
+        expect(NATIVES_TO_LANGUAGES[nativeName]).not.toEqual(randomLanguage);
+        expect(mapNativeToLanguages(nativeName)).not.toEqual(randomLanguage);
     });
 });
